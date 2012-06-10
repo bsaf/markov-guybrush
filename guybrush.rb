@@ -31,10 +31,10 @@ def makeString(mc)
   string = string.gsub("mêlée island™", "Mêlée Island™")
 end
 
-prob = 60
+prob = 1500
 
 while 1
-  # One in 60 times, generate a chain
+  # One in 1500 times, generate a chain
   if(rand(prob) < 1)
     mc = MarkovChain.new(File.read(PATH_PREFIX + "/guybrush.txt"))
     # If it's less than 141 chars, tweet it
@@ -46,5 +46,5 @@ while 1
     puts "Posting tweet: #{string}"
     Twitter.update(string)
   end
-  sleep 5 # It's how Guybrush would code.
+  sleep 20 # It's how Guybrush would code.
 end
