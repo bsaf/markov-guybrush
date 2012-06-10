@@ -42,8 +42,6 @@ while 1
     end
     puts "Posting tweet: #{string}"
     Twitter.update(string)
-  else
-    puts "[waiting...]" # for logging
   end
   sleep 5 # It's how Guybrush would code.
 end
