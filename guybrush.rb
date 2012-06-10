@@ -20,12 +20,15 @@ def makeString(mc)
   # Capitalise letters after .!?
   string = string.gsub(/([.!?])([\s]*)([[:alpha:]]{1})/) {"#{$1}#{$2}#{$3.capitalize}"}
   # Ugh, I know. Will do it a better way later. Maybe.
-  cap = [" i ", "guybrush", "threepwood", "elaine", "marley", "herman", "toothrot", "stan", "dominique", "mêlée", "island™", "monkey island™"]
+  cap = ["guybrush", "threepwood", "elaine", "marley", "herman", "toothrot", "stan", "dominique", "i'm", "i'll", "i've"]
   for item in cap
     string = string.gsub(item, item.capitalize)
   end
-  # There's always one
+  # Others. Sorry.
   string = string.gsub("lechuck", "LeChuck")
+  string = string.gsub(" i ", " I ")
+  string = string.gsub("monkey island™", "Monkey Island™")
+  string = string.gsub("mêlée island™", "Mêlée Island™")
 end
 
 prob = 60
