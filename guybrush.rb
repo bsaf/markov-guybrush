@@ -45,5 +45,5 @@ while 1
   else
     puts "[waiting...]" # for logging
   end
-  sleep 0.5 # It's how Guybrush would code.
+  sleep 5 # It's how Guybrush would code.
 end
